@@ -1,6 +1,7 @@
+@charset "UTF-8";
 * {
-  border: 1px solid #333;
   position: relative;
+  font-family: 微軟正黑體;
 }
 
 html, body {
@@ -10,10 +11,17 @@ html, body {
 
 body {
   padding: 30px;
+  background-color: #f3f3f1;
 }
 
 .classbox {
   width: 260px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  color: #4F4C4B;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .classbox .teacher {
@@ -23,21 +31,136 @@ body {
   left: 15px;
   top: -27.5px;
   border-radius: 50%;
+  background-image: url("https://hahow.in/images/57ab3d5585b097070042067a");
+  background-size: cover;
+  border: 2px solid #fff;
+  z-index: 5;
 }
 
-.classbox .tag {
+.classbox:hover .bookbtn {
+  bottom: 10px;
+}
+
+.classbox:hover .classpicture {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.top {
+  height: 160px;
+  overflow: hidden;
+}
+
+.top .tag {
   width: 100%;
   text-align: center;
   -webkit-transform: translateX(95px) translateY(15px) rotate(45deg);
           transform: translateX(95px) translateY(15px) rotate(45deg);
   padding: 5px 0px;
+  background-color: #EB5E00;
+  color: white;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
 }
 
-.top {
-  height: 160px;
+.top .classpicture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("https://hahow.in/images/574fab4f206cd60900c52a67?width=300");
+  background-size: cover;
+  border-radius: 5px 5px 0px 0px;
+  -webkit-transform: 0.3s;
+          transform: 0.3s;
+}
+
+.top .bookbtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: absolute;
+  left: 15px;
+  bottom: -50px;
+  background-color: white;
+  color: #EB5E00;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  -webkit-transition: bottom 0.3s;
+  transition: bottom 0.3s;
+}
+
+.top .bookbtn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 22px;
+}
+
+.top .bookbtn:hover {
+  background-color: #EB5E00;
+  color: white;
 }
 
 .bottom {
   height: 184px;
+  padding: 15px;
+}
+
+.bottom .classtitle {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.bottom .texts {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.bottom .texts .orange {
+  padding-left: 5px;
+  color: #FA8B00;
+}
+
+.bottom .pricerow {
+  margin-bottom: 10px;
+}
+
+.bottom .pricerow .lastday {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bottom .progressbar {
+  margin-bottom: 10px;
+  height: 10px;
+  background-color: #e7e7e3;
+  border-radius: 5px;
+}
+
+.bottom .progressbar .valuebar {
+  width: 100px;
+  height: 100%;
+  background-color: #FA8B00;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.bottom .nowpeople {
+  text-align: center;
+}
+
+.bottom .orangebar {
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #EB5E00;
+  border-radius: 0px 0px 5px 5px;
 }
 /*# sourceMappingURL=style.css.map */
