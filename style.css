@@ -2,6 +2,7 @@
 * {
   position: relative;
   font-family: 微軟正黑體;
+  vertical-align: top;
 }
 
 html, body {
@@ -22,6 +23,8 @@ body {
   color: #4F4C4B;
   border-radius: 5px;
   cursor: pointer;
+  margin: 30px 15px;
+  display: inline-block;
 }
 
 .classbox .teacher {
@@ -118,6 +121,7 @@ body {
 .bottom .classtitle {
   font-size: 25px;
   margin-top: 0;
+  height: 40%;
 }
 
 .bottom .texts {
@@ -145,6 +149,7 @@ body {
   height: 10px;
   background-color: #e7e7e3;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .bottom .progressbar .valuebar {

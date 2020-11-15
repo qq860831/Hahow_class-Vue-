@@ -8,33 +8,43 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="classbox">
-        <div class="teacher"></div>
-        <div class="top">
-            <div class="classpicture"></div>
-            <div class="tag">募資中</div>
-            <div class="bookbtn"><i class="fa fa-bookmark" aria-hidden="true"></i></div>
-        </div>
-        <div class="bottom">
-            <h1 class="classtitle">動態互動網頁程式入門</h1>
-            <div class="texts">
-                <div class="pricerow">
-                    <div class="preprice">預購價
-                        <span class="orange">NT$2000</span>
+    <!-- 使用cls是因為class在vue2版裡面會衝突到屬性 -->
+    <div id="app">
+        <div class="classbox" v-for="cls in classdatas">
+            <div class="teacher"v-bind:style="'background-image:url('+cls.owner.profileImageUrl+')'"></div>
+                <div class="top">
+                    <div class="classpicture"v-bind:style="'background-image:url('+cls.coverImage.url+')'"></div>
+                    <div class="tag">募資中</div>
+                    <div class="bookbtn"><i class="fa fa-bookmark" aria-hidden="true"></i></div>
+                </div>
+            <div class="bottom">
+                <h1 class="classtitle">{{cls.title}}</h1>
+                <div class="texts">
+                    <div class="pricerow">
+                        <div class="preprice">預購價
+                            <span class="orange">NT${{cls.preOrderedPrice}}</span>
+                        </div>
+                        <div class="lastday">剩
+                            <span class="orange">{{parseInt((new Date(cls.proposalDueTime)-new Date('2016/10/14'))/1000/60/60/24)}}天</span>
+                            <!-- 計算出是以毫秒為主在這邊要轉換成天並取整數 -->
+                        </div>
                     </div>
-                    <div class="lastday">剩
-                        <span class="orange">20天</span>
+                    <div class="progressbar">
+                        <div class="valuebar" v-bind:style="'width:'+220*cls.numSoldTickets/cls.successCriteria.numSoldTickets+'px'"></div>
+                    </div>
+                    <div class="nowpeople">已募資
+                        <span class="orange">{{cls.numSoldTickets}}/{{cls.successCriteria.numSoldTickets}}人</span>
                     </div>
                 </div>
-                <div class="progressbar">
-                    <div class="valuebar"></div>
-                </div>
-                <div class="nowpeople">已募資
-                    <span class="orange">14/50人</span>
-                </div>
+                <div class="orangebar"></div>
             </div>
-            <div class="orangebar"></div>
         </div>
     </div>
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js"></script>
+    <script src="./all.js"></script>
 </body>
 </html>
