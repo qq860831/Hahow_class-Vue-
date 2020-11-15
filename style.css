@@ -1,1 +1,43 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  border: 1px solid #333;
+  position: relative;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 30px;
+}
+
+.classbox {
+  width: 260px;
+}
+
+.classbox .teacher {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 15px;
+  top: -27.5px;
+  border-radius: 50%;
+}
+
+.classbox .tag {
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateX(95px) translateY(15px) rotate(45deg);
+          transform: translateX(95px) translateY(15px) rotate(45deg);
+  padding: 5px 0px;
+}
+
+.top {
+  height: 160px;
+}
+
+.bottom {
+  height: 184px;
+}
+/*# sourceMappingURL=style.css.map */
