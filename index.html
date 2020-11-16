@@ -10,6 +10,11 @@
 <body>
     <!-- 使用cls是因為class在vue2版裡面會衝突到屬性 -->
     <div id="app">
+        <div class="banner">
+            <div class="center_banner">
+                <img src="https://hahow.in/assets/images/publication/proposal-flow-tablet.png"/>
+            </div>
+        </div>
         <div class="classbox" v-for="cls in classdatas">
             <div class="teacher"v-bind:style="'background-image:url('+cls.owner.profileImageUrl+')'"></div>
                 <div class="top">

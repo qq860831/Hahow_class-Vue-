@@ -11,8 +11,31 @@ html, body {
 }
 
 body {
-  padding: 30px;
   background-color: #f3f3f1;
+  padding: 30px;
+}
+
+.banner {
+  height: 400px;
+  background: linear-gradient(-45deg, #FFE18D 10%, #FFE18D 10%, #FFDA71 10%, #FFDA71 40%, #FFE18D 40%, #FFE18D 60%, #FFDA71 60%, #FFDA71 90%, #FFE18D 90%, #FFE18D 100%);
+  background-size: 46px 46px;
+  position: relative;
+  margin-bottom: 30px;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-top: -30px;
+}
+
+.banner .center_banner {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
 }
 
 .classbox {
